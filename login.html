@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Infans Store" />
+    <meta name="keywords" content="infans, eCommerce, criativo, html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Infans Store</title>
+
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="shortcut icon" />
+
+    <!-- Link to CSS -->
+    <link rel="stylesheet" href="css/font-awesome.min.css" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <!-- Link to Box Icons -->
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- Navbar -->
+    <header>
+      <!-- Nav -->
+      <div class="nav container">
+        <!-- Logo -->
+        <a href="index.html" alt="Início"
+          ><img src="images/logo.png" alt="logotipo Infans"
+        /></a>
+
+        <!-- Menu do Site -->
+        <nav>
+          <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="#Meninas">Menina</a></li>
+            <li><a href="#Meninos">Menino</a></li>
+            <li><a href="contact.html">Contato</a></li>
+          </ul>
+        </nav>
+        <!-- Fim do Menu do Site -->
+
+        <!-- Cart Icon -->
+        <i class="bx bx-shopping-bag" id="cart-icon" data-quantity="0"></i>
+        <!-- cart -->
+        <div class="cart">
+          <h2 class="cart-title">Sacola</h2>
+          <!-- Content -->
+          <div class="cart-content">
+            <!-- Something was removed from here and placed in the main.js -->
+          </div>
+          <!-- Total -->
+          <div class="total">
+            <div class="total-title">Total</div>
+            <div class="total-price">$0</div>
+          </div>
+          <!-- Buy Button -->
+          <button type="button" class="btn-buy">Comprar</button>
+          <!-- Close Cart -->
+          <i class="bx bx-x" id="close-cart"></i>
+        </div>
+      </div>
+    </header>
+
+    <!-- Seção de login -->
+    <section class="hero-section set-bg">
+      <section class="login-section spad">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-6 offset-lg-3">
+              <div class="login-form">
+                <h2><a class="login">Login</a></h2>
+                <form action="#" class="needs-validation" novalidate>
+                  <div class="form-group">
+                    <label for="username">Nome de usuário</label>
+                    <input
+                      type="text"
+                      id="username"
+                      class="form-control"
+                      required
+                    />
+                    <div class="invalid-feedback">
+                      Por favor, forneça um nome de usuário.
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label for="password">Senha</label>
+                    <input
+                      type="password"
+                      id="password"
+                      class="form-control"
+                      required
+                    />
+                    <div class="invalid-feedback">
+                      Por favor, forneça uma senha.
+                    </div>
+                  </div>
+                  <div>
+                    <a href="forgot-password.html">Esqueci a senha</a>
+                  </div>
+                  <div>
+                    <button type="submit" class="site-btn">Login</button>
+                  </div>
+                  <div>
+                    <br />
+                    <h6 class="login-form">
+                      <a href="cadastro.html">Criar cadastro</a><br />
+                    </h6>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </section>
+    <!-- Fim da seção de login -->
+
+    <!--====== JavaScript e Jquery ======-->
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/main.js"></script>
+
+    <script>
+      // JavaScript para desabilitar envios de formulário se houver campos inválidos
+      (function () {
+        "use strict";
+        window.addEventListener(
+          "load",
+          function () {
+            // Buscar todos os formulários aos quais queremos aplicar estilos de validação personalizados do Bootstrap
+            var forms = document.getElementsByClassName("needs-validation");
+            // Loop sobre eles e impedir o envio
+            var validation = Array.prototype.filter.call(
+              forms,
+              function (form) {
+                form.addEventListener(
+                  "submit",
+                  function (event) {
+                    if (form.checkValidity() === false) {
+                      event.preventDefault();
+                      event.stopPropagation();
+                    }
+                    form.classList.add("was-validated");
+                  },
+                  false
+                );
+              }
+            );
+          },
+          false
+        );
+      })();
+    </script>
+
+    <!-- Seção de Rodapé -->
+    <footer class="footer-section">
+      <div class="container">
+        <p class="copyright">
+          Direitos Autorais &copy;
+          <script>
+            document.write(new Date().getFullYear());
+          </script>
+          Todos os direitos reservados
+        </p>
+      </div>
+    </footer>
+    <!-- Fim da Seção de Rodapé -->
+  </body>
+</html>
